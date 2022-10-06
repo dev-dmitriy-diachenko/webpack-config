@@ -1,0 +1,73 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true,
+    "jest": true,
+    "mongo": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "compat",
+    "import",
+    "jsx-a11y",
+    "node",
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
+  "extends": [
+    "plugin:compat/recommended",
+    "plugin:import/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:node/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "airbnb",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "node/no-unpublished-require": "off",
+    "node/no-unsupported-features/es-syntax": "off",
+
+    "no-console": "warn",
+    "lines-between-class-members": ["error", "always"],
+    "newline-before-return": "error",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      },
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "directive",
+        "next": "directive"
+      },
+      {
+        "blankLine": "always",
+        "prev": ["case", "default"],
+        "next": "*"
+      }
+    ]
+  }
+}
